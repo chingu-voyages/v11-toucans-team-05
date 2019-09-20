@@ -1,39 +1,51 @@
-html, body {
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
+
+/* Let me know if you have any questions about these CSS rules. */
+
+body,html {
+  height: 100%;
+  margin: 0px;
+  padding: 0;
 }
 
-#section_1 {
-    height: 100%;  
-    top: 0px;
-    position: relative;
+#pinContainer {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
-    
-.main_screen {
+.panel {
     width: 100%;
     height: 100%;
-    
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: -1;
-    background: url('../image/main_screen.jpg') no-repeat center center;
+    text-align: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    transform: scale(1.1);
+    background-position: center;
+    color: #ffffff;
 }
 
-h1 {
-
+.panel > h1 {
+    font-size: 1.5rem;
     color: white;
-    font-size: 7vmin;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    color: #ffeeeb;
-  }
+    position: relative;
+    display: block;
+    height: 0;
+    overflow: visible;
+    top: 50%;
+}
+
+.one {
+    background-image: url('../image/main_screen.jpg');
+}
+
+.two {
+    background-image: url('../image/main_room.jpg');
+}
+
+.three {
+    background-image: url('../image/dining_table_view.jpg');
+}
+
+.four {
+    background-image: url('../image/bar.jpg');
+}
