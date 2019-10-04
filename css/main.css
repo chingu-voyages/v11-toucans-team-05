@@ -25,27 +25,37 @@ body,html {
 }
 
 .panel > h1 {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 3.5rem;
+    color: lightgray;
     position: relative;
     display: block;
     height: 0;
     overflow: visible;
-    top: 50%;
+    
 }
+
+.restaurant-name {
+    top: 15%;
+    right: 30%;
+}
+.food-description {
+    top: 20%;
+    left: 30%;
+}
+.drinks-description {
+    top: 82%;
+}
+
+
 
 .one {
-    background-image: url('../image/main_screen.jpg');
-}
-
-.two {
     background-image: url('../image/main_room.jpg');
 }
 
-.three {
+.two {
     background-image: url('../image/dining_table_view.jpg');
 }
 
-.four {
+.three {
     background-image: url('../image/bar.jpg');
 }

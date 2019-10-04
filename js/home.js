@@ -15,7 +15,7 @@ $(function() {
   var wipeAnimation = new TimelineMax()
   .fromTo("div.panel.two", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone})     // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
   .fromTo("div.panel.three", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone})   // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
-  .fromTo("div.panel.four", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone});   // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
+  //.fromTo("div.panel.four", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone});   // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
   
   // Here is ScrollMagic Doc. https://scrollmagic.io/docs/ScrollMagic.Scene.html#constructor
   new ScrollMagic.Scene ({
