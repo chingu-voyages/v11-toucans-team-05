@@ -3,6 +3,7 @@ $(function() {
 
   // Initialize the ScrollMagic Controller Object/Function.
   var controller = new ScrollMagic.Controller();
+  
 
   /**************************************************************************************************
   *  I saw a lot people use ScrollMagic and GSAP together.                                          *
@@ -15,7 +16,6 @@ $(function() {
   var wipeAnimation = new TimelineMax()
   .fromTo("div.panel.two", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone})     // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
   .fromTo("div.panel.three", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone})   // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
-  //.fromTo("div.panel.four", 1, {y: "100%", opacity: 0.75}, {y: "0%", opacity: 1, ease: Linear.easeNone});   // Chaining .fromTo(). Same as wipeAnimation.fromTo(...)
   
   // Here is ScrollMagic Doc. https://scrollmagic.io/docs/ScrollMagic.Scene.html#constructor
   new ScrollMagic.Scene ({
@@ -28,4 +28,37 @@ $(function() {
   .setTween(wipeAnimation)                // set the tween on this scene which is pinned on #pinContainer.
   .addTo(controller);                     // Last step, add the scene to the ScrollMagic controller. Just like video game, character cannot move without a controller
 
+
+  new ScrollMagic.Scene({
+    triggerElement: "#slidein1",
+    triggerHook: 0.5, // show, when scrolled 10% into view
+    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+    offset: 50 // move trigger to center of element
+  })
+  .setClassToggle("#slidein1", "visible") // add class to reveal
+  //.addIndicators() // add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#slidein2",
+    triggerHook: 0.9, // show, when scrolled 10% into view
+    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+    offset: 50 // move trigger to center of element
+  })
+  .setClassToggle("#slidein2", "visible") // add class to reveal
+  //.addIndicators() // add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#slidein3",
+    triggerHook: 0.9, // show, when scrolled 10% into view
+    duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
+    offset: 50 // move trigger to center of element
+  })
+  .setClassToggle("#slidein3", "visible") // add class to reveal
+  //.addIndicators() // add indicators (requires plugin)
+  .addTo(controller);
 });
+
+
+  

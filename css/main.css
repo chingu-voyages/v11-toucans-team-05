@@ -28,25 +28,38 @@ body,html {
     font-size: 3.5rem;
     color: lightgray;
     position: relative;
-    display: block;
     height: 0;
     overflow: visible;
     
 }
-
-.restaurant-name {
-    top: 15%;
-    right: 30%;
+.section1-text {
+    font-size: 3.5rem;
 }
-.food-description {
-    top: 20%;
-    left: 30%;
+#slidein1 {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 2%;
+    padding-left: 10%;
 }
-.drinks-description {
-    top: 82%;
+#slidein2 {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    padding-top: 5%;
 }
+#slidein3 {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    padding-bottom: 3%;
+}
+.three {
 
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   
+}
 
 .one {
     background-image: url('../image/main_room.jpg');
@@ -58,4 +71,32 @@ body,html {
 
 .three {
     background-image: url('../image/bar.jpg');
+}
+
+#slidein1, 
+#slidein2, 
+#slidein3 {
+    margin-top: 50px;
+
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+         -moz-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+             -o-transform: scale(0.9);
+                    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+         -moz-transition: all 1s ease-in-out;
+            -ms-transition: all 1s ease-in-out;
+             -o-transition: all 1s ease-in-out;
+                    transition: all 1s ease-in-out;
+}
+#slidein1.visible,
+#slidein2.visible,
+#slidein3.visible {
+    opacity: 1;
+    -webkit-transform: none;
+         -moz-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                    transform: none;
 }
