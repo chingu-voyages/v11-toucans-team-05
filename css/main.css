@@ -7,13 +7,15 @@ body,html {
   padding: 0;
 }
 
-#pinContainer {
+#pinContainer, 
+#section2 {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.panel {
+.panel,
+.food-menu {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -71,6 +73,9 @@ body,html {
 
 .three {
     background-image: url('../image/bar.jpg');
+}
+#section2 {
+    background-image: url('../image/food-menu.jpg');
 }
 
 #slidein1, 
