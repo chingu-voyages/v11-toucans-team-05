@@ -25,6 +25,7 @@ $(function() {
   })
 
   .setPin('#pinContainer')                // Pin the scene on #pinContainer. (You probably know this but I'll just put here: # means id and . means class)
+  //.addIndicators() // add indicators (requires plugin)
   .setTween(wipeAnimation)                // set the tween on this scene which is pinned on #pinContainer.
   .addTo(controller);                     // Last step, add the scene to the ScrollMagic controller. Just like video game, character cannot move without a controller
 
@@ -58,7 +59,17 @@ $(function() {
   .setClassToggle("#slidein3", "visible") // add class to reveal
   //.addIndicators() // add indicators (requires plugin)
   .addTo(controller);
+
+  var revealElements = document.getElementsByClassName("digit");
+  for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+    new ScrollMagic.Scene({
+              triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+              offset: 50,												 // start a little later
+              triggerHook: 0.9,
+            })
+            .setClassToggle(revealElements[i], "visible") // add class toggle
+            //.addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+            .addTo(controller);
+  }
+
 });
-
-
-  
