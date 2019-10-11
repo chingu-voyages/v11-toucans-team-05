@@ -100,14 +100,14 @@ body,html {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
   }
 
   #contacts, #hours {
     flex: 1 1 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     padding-top: 50px;
   }
 
@@ -120,53 +120,50 @@ body,html {
       height: 0;
       overflow: visible;
       flex: 1 1 0px;
-      text-align: center;
   }
 
   .contact-content {
-    flex: 1 1 0px;
+    flex: 2 1 0px;
     display: flex;
-    
+    flex-direction: row-reverse;
   }
-  .contact_1,
-  .contact_2 {
-    flex: 1 1 0px;
+  .contact_1 {
     display: flex;
   }
 
   .contact_1 > .contact_pic1,
-  .contact_1 > .contact_info_1,
-  .contact_2 > .contact_pic2,
-  .contact_2 > .contact_info_2{
+  .contact_1 > .contact_info_1 {
     flex: 1 1 0px;
     display: flex;
     flex-direction: column;
   }
 
   .contact_pic1 {
-    background-image: url('../image/contact-male.png');
-    background-position: right;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+  }
+  .fa-github-alt {
+      align-self: right;
+      color: lightgrey;
   }
 
-  .contact_pic2 {
-    background-image: url('../image/contact-female.png');
-    background-position: right;
-    background-repeat: no-repeat;
-  }
-
-  .contact_info_1 > h2,
-  .contact_info_2 > h2 {
+  .contact_info_1 > h2 {
     margin: 0px;
     color: darkgray;
-    
     padding-left: 30px;
     padding-top: 15px;
   }
-
+.hours-desc,
+.contact-desc {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 35%;
+}
   .hour-content > h3 {
     color: darkgray;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15%;
   }
 
   #slidein1, 
