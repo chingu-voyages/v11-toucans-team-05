@@ -22,6 +22,19 @@ This is a landing page for a restaurant
 ## MVP (Minimum Viable Product)
 * Fully responsive landing page
 
+## Screenshots
+Homepage:
+
+![homepage](homepage-screenshot-1.jpg)
+
+Food Menu:
+
+![food menu](menu-screenshot-2.png)
+
+Contacts:
+
+![contacts](contacts-screenshot-3.png)
+
 ## Tech Stack
 * HTML
 * CSS
